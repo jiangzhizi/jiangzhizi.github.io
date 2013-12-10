@@ -1,4 +1,4 @@
 jiangzhizi.github.io
 ====================
 
-study
+practice
