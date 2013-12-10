@@ -15,174 +15,319 @@
 		  font-style: normal;
 		}
 		ul{list-style: none;}
-		ul li{display: inline-block;}
-		.icon-social{font-family: 'fontello'; padding: 8px 20px; margin-right: 20px;background-color: #dd4f4f; color: #fff; font-size: 30px; line-height: 50px; text-align: center; box-shadow: 3px 3px 5px rgba(0,0,0,.6);border-radius: 5px;}
-		.icon-social-weibo{}
-		.icon-social-statusnet:before { content: '\e2'; }
+		ul li{display: inline-block; margin: 10px 20px;}
+		.icon-social{font-family: 'fontello'; padding: 8px 20px;background-color: #dd4f4f; color: #fff; font-size: 30px; line-height: 50px; text-align: center; box-shadow: 3px 3px 5px rgba(0,0,0,.6);border-radius: 5px;}
+		/*.icon-social-aim:before { content: '\22'; } '&quot;'
+		.icon-social-delicious:before { content: '\23'; } '#'
+		.icon-social-paypal:before { content: '\24'; } '$'
+		.icon-social-flattr:before { content: '\25'; } '%'
+		.icon-social-android:before { content: '\26'; } '&amp;'
+		.icon-social-eventful:before { content: '\27'; } '''
+		.icon-social-smashmag:before { content: '\2a'; } '*'
+		.icon-social-gplus:before { content: '\2b'; } '+'
+		.icon-social-wikipedia:before { content: '\2c'; } ','
+		.icon-social-lanyrd:before { content: '\2d'; } '-'
+		.icon-social-calendar:before { content: '\2e'; } '.'
+		.icon-social-stumbleupon:before { content: '\2f'; } '/'
+		.icon-social-fivehundredpx:before { content: '\30'; } '0'
+		.icon-social-pinterest:before { content: '\31'; } '1'
+		.icon-social-bitcoin:before { content: '\32'; } '2'
+		.icon-social-w3c:before { content: '\33'; } '3'
+		.icon-social-foursquare:before { content: '\34'; } '4'
+		.icon-social-html5:before { content: '\35'; } '5'
+		.icon-social-ie:before { content: '\36'; } '6'
+		.icon-social-call:before { content: '\37'; } '7'
+		.icon-social-grooveshark:before { content: '\38'; } '8'
+		.icon-social-ninetyninedesigns:before { content: '\39'; } '9'
+		.icon-social-forrst:before { content: '\3a'; } ':'
+		.icon-social-digg:before { content: '\3b'; } ';'
+		.icon-social-spotify:before { content: '\3d'; } '=' 
+		.icon-social-reddit:before { content: '\3e'; } '&gt;'
+		.icon-social-guest:before { content: '\3f'; } '?'
+		.icon-social-gowalla:before { content: '\40'; } '@'
+		.icon-social-appstore:before { content: '\41'; } 'A'
+		.icon-social-blogger:before { content: '\42'; } 'B'
+		.icon-social-cc:before { content: '\43'; } 'C'
+		.icon-social-dribbble:before { content: '\44'; } 'D'
+		.icon-social-evernote:before { content: '\45'; } 'E'
+		.icon-social-flickr:before { content: '\46'; } 'F'
+		.icon-social-google:before { content: '\47'; } 'G'
+		.icon-social-viadeo:before { content: '\48'; } 'H'
+		.icon-social-instapaper:before { content: '\49'; } 'I' */
+		.icon-social-weibo:before { content: '\4a'; } /* 'J' */
+		.icon-social-klout:before { content: '\4b'; } /* 'K' */
+		.icon-social-linkedin:before { content: '\4c'; } /* 'L' */
+		.icon-social-meetup:before { content: '\4d'; } /* 'M' */
+		.icon-social-vk:before { content: '\4e'; } /* 'N' */
+		.icon-social-plancast:before { content: '\50'; } /* 'P' */
+		.icon-social-disqus:before { content: '\51'; } /* 'Q' */
+		.icon-social-rss:before { content: '\52'; } /* 'R' */
+		.icon-social-skype:before { content: '\53'; } /* 'S' */
+		.icon-social-twitter:before { content: '\54'; } /* 'T' */
+		.icon-social-youtube:before { content: '\55'; } /* 'U' */
+		.icon-social-vimeo:before { content: '\56'; } /* 'V' */
+		.icon-social-windows:before { content: '\57'; } /* 'W' */
+		.icon-social-xing:before { content: '\58'; } /* 'X' */
+		.icon-social-yahoo:before { content: '\59'; } /* 'Y' */
+		.icon-social-chrome:before { content: '\5b'; } /* '[' */
+		.icon-social-email:before { content: '\5d'; } /* ']' */
+		.icon-social-macstore:before { content: '\5e'; } /* '^' */
+		.icon-social-myspace:before { content: '\5f'; } /* '_' */
+		.icon-social-podcast:before { content: '\60'; } /* '`' */
+		.icon-social-amazon:before { content: '\61'; } /* 'a' */
+		.icon-social-steam:before { content: '\62'; } /* 'b' */
+		.icon-social-cloudapp:before { content: '\63'; } /* 'c' */
+		.icon-social-dropbox:before { content: '\64'; } /* 'd' */
+		.icon-social-ebay:before { content: '\65'; } /* 'e' */
+		.icon-social-facebook:before { content: '\66'; } /* 'f' */
+		.icon-social-github:before { content: '\67'; } /* 'g' */
+		.icon-social-googleplay:before { content: '\68'; } /* 'h' */
+		.icon-social-itunes:before { content: '\69'; } /* 'i' */
+		.icon-social-plurk:before { content: '\6a'; } /* 'j' */
+		.icon-social-songkick:before { content: '\6b'; } /* 'k' */
+		.icon-social-lastfm:before { content: '\6c'; } /* 'l' */
+		.icon-social-gmail:before { content: '\6d'; } /* 'm' */
+		.icon-social-pinboard:before { content: '\6e'; } /* 'n' */
+		.icon-social-openid:before { content: '\6f'; } /* 'o' */
+		.icon-social-quora:before { content: '\71'; } /* 'q' */
+		.icon-social-soundcloud:before { content: '\73'; } /* 's' */
+		.icon-social-tumblr:before { content: '\74'; } /* 't' */
+		.icon-social-eventasaurus:before { content: '\76'; } /* 'v' */
+		.icon-social-wordpress:before { content: '\77'; } /* 'w' */
+		.icon-social-yelp:before { content: '\79'; } /* 'y' */
+		.icon-social-intensedebate:before { content: '\7b'; } /* '{' */
+		.icon-social-eventbrite:before { content: '\7c'; } /* '|' */
+		.icon-social-scribd:before { content: '\7d'; } /* '}' */
+		.icon-social-posterous:before { content: '\7e'; } /* '~' */
+		.icon-social-stripe:before { content: '\a3'; } /* 拢 */
+		.icon-social-opentable:before { content: '\c7'; } /* 脟 */
+		.icon-social-cart:before { content: '\c9'; } /* 脡 */
+		.icon-social-print:before { content: '\d1'; } /* 脩 */
+		.icon-social-angellist:before { content: '\d6'; } /* 脰 */
+		.icon-social-instagram:before { content: '\dc'; } /* 脺 */
+		.icon-social-dwolla:before { content: '\e0'; } /* 脿 */
+		.icon-social-appnet:before { content: '\e1'; } /* 谩 */
+		.icon-social-statusnet:before { content: '\e2'; } /* 芒 */
+		.icon-social-acrobat:before { content: '\e3'; } /* 茫 */
+		.icon-social-drupal:before { content: '\e4'; } /* 盲 */
+		.icon-social-buffer:before { content: '\e5'; } /* 氓 */
+		.icon-social-pocket:before { content: '\e7'; } /* 莽 */
+		.icon-social-bitbucket:before { content: '\e9'; } /* 茅 */
+		.icon-social-firefox:before { content: '\e840'; } /* 睢€ */
+		.icon-social-opera:before { content: '\e842'; } /* 睢� */
+		.icon-social-pinterest-squared:before { content: '\f0d3'; } /* 飪� */
+		.icon-social-gplus-squared:before { content: '\f0d4'; } /* 飪� */
+		.icon-social-github-squared:before { content: '\e801'; } /* 顮� */
+		.icon-social-github-circled:before { content: '\f301'; } /* 飳� */
+		.icon-social-facebook-rect:before { content: '\e804'; } /* 顮� */
+		.icon-social-twitter-bird:before { content: '\e805'; } /* 顮� */
+		.icon-social-flickr-circled:before { content: '\f304'; } /* 飳� */
+		.icon-social-twitter-squared:before { content: '\e802'; } /* 顮� */
+		.icon-social-icq:before { content: '\e80c'; } /* 顮� */
+		.icon-social-yandex:before { content: '\f305'; } /* 飳� */
+		.icon-social-yandex-rect:before { content: '\e80d'; } /* 顮� */
+		.icon-social-vimeo-circled:before { content: '\f307'; } /* 飳� */
+		.icon-social-github-text:before { content: '\e80a'; } /* 顮� */
+		.icon-social-googleplus-rect:before { content: '\e809'; } /* 顮� */
+		.icon-social-twitter-circled:before { content: '\f30a'; } /* 飳� */
+		.icon-social-vkontakte-rect:before { content: '\e80e'; } /* 顮� */
+		.icon-social-linkedin-squared:before { content: '\e800'; } /* 顮€ */
+		.icon-social-odnoklassniki:before { content: '\e80f'; } /* 顮� */
+		.icon-social-facebook-circled:before { content: '\f30d'; } /* 飳� */
+		.icon-social-odnoklassniki-rect:before { content: '\e810'; } /* 顮� */
+		.icon-social-facebook-squared:before { content: '\f30e'; } /* 飳� */
+		.icon-social-vimeo-rect:before { content: '\e807'; } /* 顮� */
+		.icon-social-gplus-circled:before { content: '\f310'; } /* 飳� */
+		.icon-social-tumblr-rect:before { content: '\e808'; } /* 顮� */
+		.icon-social-friendfeed:before { content: '\e811'; } /* 顮� */
+		.icon-social-pinterest-circled:before { content: '\f313'; } /* 飳� */
+		.icon-social-friendfeed-rect:before { content: '\e812'; } /* 顮� */
+		.icon-social-tumblr-circled:before { content: '\f316'; } /* 飳� */
+		.icon-social-deviantart:before { content: '\e814'; } /* 顮� */
+		.icon-social-jabber:before { content: '\f317'; } /* 飳� */
+		.icon-social-linkedin-circled:before { content: '\f319'; } /* 飳� */
+		.icon-social-lastfm-rect:before { content: '\e816'; } /* 顮� */
+		.icon-social-linkedin-rect:before { content: '\e817'; } /* 顮� */
+		.icon-social-dribbble-circled:before { content: '\f31c'; } /* 飳� */
+		.icon-social-stumbleupon-circled:before { content: '\f31f'; } /* 飳� */
+		.icon-social-instagram-filled:before { content: '\e81a'; } /* 顮� */
+		.icon-social-lastfm-circled:before { content: '\f322'; } /* 飳� */
+		.icon-social-rdio:before { content: '\f324'; } /* 飳� */
+		.icon-social-rdio-circled:before { content: '\f325'; } /* 飳� */
+		.icon-social-spotify-circled:before { content: '\f328'; } /* 飳� */
+		.icon-social-qq:before { content: '\f32a'; } /* 飳� */
+		.icon-social-skype-circled:before { content: '\f33a'; } /* 飳� */
+		.icon-social-renren:before { content: '\f33c'; } /* 飳� */
+		.icon-social-sina-weibo:before { content: '\f33f'; } /* 飳� */
+		.icon-social-picasa:before { content: '\f345'; } /* 飴� */
+		.icon-social-mixi:before { content: '\f34b'; } /* 飴� */
+		.icon-social-behance:before { content: '\f34e'; } /* 飴� */
+		.icon-social-google-circles:before { content: '\f351'; } /* 飴� */
+		.icon-social-vkontakte:before { content: '\f354'; } /* 飴� */
+		.icon-social-smashing:before { content: '\f357'; } /* 飴� */
+		.icon-social-db-shape:before { content: '\f600'; } /* 飿€ */
+		.icon-social-sweden:before { content: '\f601'; } /* 飿� */
+		.icon-social-logo-db:before { content: '\f603'; } /* 飿� */
 	</style>
 </head>
 <body>
 	<ul>
-		<li><i class="icon-social icon-social-weibo">J</i></li>
-		<li><i class="icon-social icon-social-delicious">#</i></li>
-		<li><i class="icon-social icon-social-gowalla">@</i></li>
-		<li><i class="icon-social icon-social-pinterest">1</i></li>
+		<li><i class="icon-social">&quot;</i></li> <!-- icon-social-aim -->
+		<li><i class="icon-social">#</i></li> <!-- icon-social-delicious -->
+		<li><i class="icon-social">$</i></li> <!-- icon-social-paypal -->
+		<li><i class="icon-social">%</i></li> <!-- icon-social-flattr -->
+		<li><i class="icon-social">&amp;</i></li> <!-- icon-social-android -->
+		<li><i class="icon-social">'</i></li> <!-- icon-social-eventful -->
+		<li><i class="icon-social">*</i></li> <!-- icon-social-smashmag -->
+		<li><i class="icon-social">+</i></li> <!-- icon-social-gplus -->
+		<li><i class="icon-social">,</i></li> <!-- icon-social-wikipedia -->
+		<li><i class="icon-social">-</i></li> <!-- icon-social-lanyrd -->
+		<li><i class="icon-social">.</i></li> <!-- icon-social-calendar -->
+		<li><i class="icon-social">/</i></li> <!-- icon-social-stumbleupon -->
+		<li><i class="icon-social">0</i></li> <!-- icon-social-fivehundredpx -->
+		<li><i class="icon-social">1</i></li> <!-- icon-social-pinterest -->
+		<li><i class="icon-social">2</i></li> <!-- icon-social-bitcoin -->
+		<li><i class="icon-social">3</i></li> <!-- icon-social-w3c -->
+		<li><i class="icon-social">4</i></li> <!-- icon-social-foursquare -->
+		<li><i class="icon-social">5</i></li> <!-- icon-social-html5 -->
+		<li><i class="icon-social">6</i></li> <!-- icon-social-ie -->
+		<li><i class="icon-social">7</i></li> <!-- icon-social-call -->
+		<li><i class="icon-social">8</i></li> <!-- icon-social-grooveshark -->
+		<li><i class="icon-social">9</i></li> <!-- icon-social-ninetyninedesigns -->
+		<li><i class="icon-social">:</i></li> <!-- icon-social-forrst -->
+		<li><i class="icon-social">;</i></li> <!-- icon-social-digg -->
+		<li><i class="icon-social">=</i></li> <!-- icon-social-spotify -->
+		<li><i class="icon-social">&gt;</i></li> <!-- icon-social-reddit -->
+		<li><i class="icon-social">?</i></li> <!-- icon-social-guest -->
+		<li><i class="icon-social">@</i></li> <!-- icon-social-gowalla -->
+		<li><i class="icon-social">A</i></li> <!-- icon-social-appstore -->
+		<li><i class="icon-social">B</i></li> <!-- icon-social-blogger -->
+		<li><i class="icon-social">C</i></li> <!-- icon-social-cc -->
+		<li><i class="icon-social">D</i></li> <!-- icon-social-dribbble -->
+		<li><i class="icon-social">E</i></li> <!-- icon-social-evernote -->
+		<li><i class="icon-social">F</i></li> <!-- icon-social-flickr -->
+		<li><i class="icon-social">G</i></li> <!-- icon-social-google -->
+		<li><i class="icon-social">H</i></li> <!-- icon-social-viadeo -->
+		<li><i class="icon-social">I</i></li> <!-- icon-social-instapaper -->
+		<li><i class="icon-social">J</i></li>
+		<li><i class="icon-social icon-social-weibo"><!-- J --></i></li>
+		<li><i class="icon-social icon-social-klout"><!-- K --></i></li>
+		<li><i class="icon-social icon-social-linkedin"><!-- L --></i></li>
+		<li><i class="icon-social icon-social-meetup"><!-- M --></i></li>
+		<li><i class="icon-social icon-social-vk"><!-- N --></i></li>
+		<li><i class="icon-social icon-social-plancast"><!-- P --></i></li>
+		<li><i class="icon-social icon-social-disqus"><!-- Q --></i></li>
+		<li><i class="icon-social icon-social-rss"><!-- R --></i></li>
+		<li><i class="icon-social icon-social-skype"><!-- S --></i></li>
+		<li><i class="icon-social icon-social-twitter"><!-- T --></i></li>
+		<li><i class="icon-social icon-social-youtube"><!-- U --></i></li>
+		<li><i class="icon-social icon-social-vimeo"><!-- V --></i></li>
+		<li><i class="icon-social icon-social-windows"><!-- W --></i></li>
+		<li><i class="icon-social icon-social-xing"><!-- X --></i></li>
+		<li><i class="icon-social icon-social-yahoo"><!-- Y --></i></li>
+		<li><i class="icon-social icon-social-chrome"><!-- [ --></i></li>
+		<li><i class="icon-social icon-social-email"><!-- ] --></i></li>
+		<li><i class="icon-social icon-social-macstore"><!-- ^ --></i></li>
+		<li><i class="icon-social icon-social-myspace"><!-- _ --></i></li>
+		<li><i class="icon-social icon-social-podcast"><!-- ` --></i></li>
+		<li><i class="icon-social icon-social-amazon"><!-- a --></i></li>
+		<li><i class="icon-social icon-social-steam"><!-- b --></i></li>
+		<li><i class="icon-social icon-social-cloudapp"><!-- c --></i></li>
+		<li><i class="icon-social icon-social-dropbox"><!-- d --></i></li>
+		<li><i class="icon-social icon-social-ebay"><!-- e --></i></li>
+		<li><i class="icon-social icon-social-facebook"><!-- f --></i></li>
+		<li><i class="icon-social icon-social-github"><!-- g --></i></li>
+		<li><i class="icon-social icon-social-googleplay"><!-- h --></i></li>
+		<li><i class="icon-social icon-social-itunes"><!-- i --></i></li>
+		<li><i class="icon-social icon-social-plurk"><!-- j --></i></li>
+		<li><i class="icon-social icon-social-songkick"><!-- k --></i></li>
+		<li><i class="icon-social icon-social-lastfm"><!-- l --></i></li>
+		<li><i class="icon-social icon-social-gmail"><!-- m --></i></li>
+		<li><i class="icon-social icon-social-pinboard"><!-- n --></i></li>
+		<li><i class="icon-social icon-social-openid"><!-- o --></i></li>
+		<li><i class="icon-social icon-social-quora"><!-- q --></i></li>
+		<li><i class="icon-social icon-social-soundcloud"><!-- s --></i></li>
+		<li><i class="icon-social icon-social-tumblr"><!-- t --></i></li>
+		<li><i class="icon-social icon-social-eventasaurus"><!-- v --></i></li>
+		<li><i class="icon-social icon-social-wordpress"><!-- w --></i></li>
+		<li><i class="icon-social icon-social-yelp"><!-- y --></i></li>
+		<li><i class="icon-social icon-social-intensedebate"><!-- { --></i></li>
+		<li><i class="icon-social icon-social-eventbrite"><!-- | --></i></li>
+		<li><i class="icon-social icon-social-scribd"><!-- } --></i></li>
+		<li><i class="icon-social icon-social-posterous"><!-- ~ --></i></li>
+		<li><i class="icon-social icon-social-stripe"><!-- 拢 --></i></li>
+		<li><i class="icon-social icon-social-opentable"><!-- 脟 --></i></li>
+		<li><i class="icon-social icon-social-cart"><!-- 脡 --></i></li>
+		<li><i class="icon-social icon-social-print"><!-- 脩 --></i></li>
+		<li><i class="icon-social icon-social-angellist"><!-- 脰 --></i></li>
+		<li><i class="icon-social icon-social-instagram"><!-- 脺 --></i></li>
+		<li><i class="icon-social icon-social-dwolla"><!-- 脿 --></i></li>
+		<li><i class="icon-social icon-social-appnet"><!-- 谩 --></i></li>
 		<li><i class="icon-social icon-social-statusnet"><!-- 芒 --></i></li>
+		<li><i class="icon-social icon-social-acrobat"><!-- 茫 --></i></li>
+		<li><i class="icon-social icon-social-drupal"><!-- 盲 --></i></li>
+		<li><i class="icon-social icon-social-buffer"><!-- 氓 --></i></li>
+		<li><i class="icon-social icon-social-pocket"><!-- 莽 --></i></li>
+		<li><i class="icon-social icon-social-bitbucket"><!-- 茅 --></i></li>
+		<li><i class="icon-social icon-social-firefox"><!-- 睢€ --></i></li>
+		<li><i class="icon-social icon-social-opera"><!-- 睢� --></i></li>
+		<li><i class="icon-social icon-social-pinterest-squared"><!-- 飪� --></i></li>
+		<li><i class="icon-social icon-social-gplus-squared"><!-- 飪� --></i></li>
+		<li><i class="icon-social icon-social-github-squared"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-github-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-facebook-rect"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-twitter-bird"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-flickr-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-twitter-squared"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-icq"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-yandex"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-yandex-rect"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-vimeo-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-github-text"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-googleplus-rect"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-twitter-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-vkontakte-rect"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-linkedin-squared"><!-- 顮€ --></i></li>
+		<li><i class="icon-social icon-social-odnoklassniki"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-facebook-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-odnoklassniki-rect"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-facebook-squared"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-vimeo-rect"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-gplus-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-tumblr-rect"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-friendfeed"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-pinterest-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-friendfeed-rect"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-tumblr-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-deviantart"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-jabber"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-linkedin-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-lastfm-rect"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-linkedin-rect"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-dribbble-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-stumbleupon-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-instagram-filled"><!-- 顮� --></i></li>
+		<li><i class="icon-social icon-social-lastfm-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-rdio"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-rdio-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-spotify-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-qq"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-skype-circled"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-renren"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-sina-weibo"><!-- 飳� --></i></li>
+		<li><i class="icon-social icon-social-picasa"><!-- 飴� --></i></li>
+		<li><i class="icon-social icon-social-mixi"><!-- 飴� --></i></li>
+		<li><i class="icon-social icon-social-behance"><!-- 飴� --></i></li>
+		<li><i class="icon-social icon-social-google-circles"><!-- 飴� --></i></li>
+		<li><i class="icon-social icon-social-vkontakte"><!-- 飴� --></i></li>
+		<li><i class="icon-social icon-social-smashing"><!-- 飴� --></i></li>
+		<li><i class="icon-social icon-social-db-shape"><!--飿€ --></i></li>
+		<li><i class="icon-social icon-social-sweden"><!-- 飿� --></i></li>
+		<li><i class="icon-social icon-social-logo-db"><!-- 飿� --></i></li>
 	</ul>
 </body>
 <style>
 	/*.icon-social:before{font-family: 'fontello';  font-style: normal;  font-weight: normal;  speak: none;  display: inline-block;}*/
-	/* http://assets.av2.me/lib/font-social/font/fontello.eot
-	.icon-social-aim:before { content: '\22'; } '&quot;'
-	.icon-social-delicious:before { content: '\23'; } '#'
-	.icon-social-paypal:before { content: '\24'; } '$'
-	.icon-social-flattr:before { content: '\25'; } '%'
-	.icon-social-android:before { content: '\26'; } '&amp;'
-	.icon-social-eventful:before { content: '\27'; } '''
-	.icon-social-smashmag:before { content: '\2a'; } '*'
-	.icon-social-gplus:before { content: '\2b'; } '+'
-	.icon-social-wikipedia:before { content: '\2c'; } ','
-	.icon-social-lanyrd:before { content: '\2d'; } '-'
-	.icon-social-calendar:before { content: '\2e'; } '.'
-	.icon-social-stumbleupon:before { content: '\2f'; } '/'
-	.icon-social-fivehundredpx:before { content: '\30'; } '0'
-	.icon-social-pinterest:before { content: '\31'; } '1'
-	.icon-social-bitcoin:before { content: '\32'; } '2'
-	.icon-social-w3c:before { content: '\33'; } '3'
-	.icon-social-foursquare:before { content: '\34'; } '4'
-	.icon-social-html5:before { content: '\35'; } '5'
-	.icon-social-ie:before { content: '\36'; } '6'
-	.icon-social-call:before { content: '\37'; } '7'
-	.icon-social-grooveshark:before { content: '\38'; } '8'
-	.icon-social-ninetyninedesigns:before { content: '\39'; } '9'
-	.icon-social-forrst:before { content: '\3a'; } ':'
-	.icon-social-digg:before { content: '\3b'; } ';'
-	.icon-social-spotify:before { content: '\3d'; } '='
-	.icon-social-reddit:before { content: '\3e'; } '&gt;'
-	.icon-social-guest:before { content: '\3f'; } '?'
-	.icon-social-gowalla:before { content: '\40'; } '@'
-	.icon-social-appstore:before { content: '\41'; } 'A'
-	.icon-social-blogger:before { content: '\42'; } 'B'
-	.icon-social-cc:before { content: '\43'; } 'C'
-	.icon-social-dribbble:before { content: '\44'; } 'D'
-	.icon-social-evernote:before { content: '\45'; } 'E'
-	.icon-social-flickr:before { content: '\46'; } 'F'
-	.icon-social-google:before { content: '\47'; } 'G'
-	.icon-social-viadeo:before { content: '\48'; } 'H'
-	.icon-social-instapaper:before { content: '\49'; } 'I'
-	.icon-social-weibo:before { content: '\4a'; } 'J'
-	.icon-social-klout:before { content: '\4b'; } 'K'
-	.icon-social-linkedin:before { content: '\4c'; } 'L'
-	.icon-social-meetup:before { content: '\4d'; } 'M'
-	.icon-social-vk:before { content: '\4e'; } 'N'
-	.icon-social-plancast:before { content: '\50'; } 'P'
-	.icon-social-disqus:before { content: '\51'; } 'Q'
-	.icon-social-rss:before { content: '\52'; } 'R'
-	.icon-social-skype:before { content: '\53'; } 'S'
-	.icon-social-twitter:before { content: '\54'; } 'T'
-	.icon-social-youtube:before { content: '\55'; } 'U'
-	.icon-social-vimeo:before { content: '\56'; } 'V'
-	.icon-social-windows:before { content: '\57'; } 'W'
-	.icon-social-xing:before { content: '\58'; } 'X'
-	.icon-social-yahoo:before { content: '\59'; } 'Y'
-	.icon-social-chrome:before { content: '\5b'; } '['
-	.icon-social-email:before { content: '\5d'; } ']'
-	.icon-social-macstore:before { content: '\5e'; } '^'
-	.icon-social-myspace:before { content: '\5f'; } '_'
-	.icon-social-podcast:before { content: '\60'; } '`'
-	.icon-social-amazon:before { content: '\61'; } 'a'
-	.icon-social-steam:before { content: '\62'; } 'b'
-	.icon-social-cloudapp:before { content: '\63'; } 'c'
-	.icon-social-dropbox:before { content: '\64'; } 'd'
-	.icon-social-ebay:before { content: '\65'; } 'e'
-	.icon-social-facebook:before { content: '\66'; } 'f'
-	.icon-social-github:before { content: '\67'; } 'g'
-	.icon-social-googleplay:before { content: '\68'; } 'h'
-	.icon-social-itunes:before { content: '\69'; } 'i'
-	.icon-social-plurk:before { content: '\6a'; } 'j'
-	.icon-social-songkick:before { content: '\6b'; } 'k'
-	.icon-social-lastfm:before { content: '\6c'; } 'l'
-	.icon-social-gmail:before { content: '\6d'; } 'm'
-	.icon-social-pinboard:before { content: '\6e'; } 'n'
-	.icon-social-openid:before { content: '\6f'; } 'o'
-	.icon-social-quora:before { content: '\71'; } 'q'
-	.icon-social-soundcloud:before { content: '\73'; } 's'
-	.icon-social-tumblr:before { content: '\74'; } 't'
-	.icon-social-eventasaurus:before { content: '\76'; } 'v'
-	.icon-social-wordpress:before { content: '\77'; } 'w'
-	.icon-social-yelp:before { content: '\79'; } 'y'
-	.icon-social-intensedebate:before { content: '\7b'; } '{'
-	.icon-social-eventbrite:before { content: '\7c'; } '|'
-	.icon-social-scribd:before { content: '\7d'; } '}'
-	.icon-social-posterous:before { content: '\7e'; } '~'
-	.icon-social-stripe:before { content: '\a3'; } '拢'
-	.icon-social-opentable:before { content: '\c7'; } '脟'
-	.icon-social-cart:before { content: '\c9'; } '脡'
-	.icon-social-print:before { content: '\d1'; } '脩'
-	.icon-social-angellist:before { content: '\d6'; } '脰'
-	.icon-social-instagram:before { content: '\dc'; } '脺'
-	.icon-social-dwolla:before { content: '\e0'; } '脿'
-	.icon-social-appnet:before { content: '\e1'; } '谩'
-	.icon-social-statusnet:before { content: '\e2'; } '芒'
-	.icon-social-acrobat:before { content: '\e3'; } '茫'
-	.icon-social-drupal:before { content: '\e4'; } '盲'
-	.icon-social-buffer:before { content: '\e5'; } '氓'
-	.icon-social-pocket:before { content: '\e7'; } '莽'
-	.icon-social-bitbucket:before { content: '\e9'; } '茅'
-	.icon-social-firefox:before { content: '\e840'; } '睢€'
-	.icon-social-opera:before { content: '\e842'; } '睢�'
-	.icon-social-pinterest-squared:before { content: '\f0d3'; } '飪�'
-	.icon-social-gplus-squared:before { content: '\f0d4'; } '飪�'
-	.icon-social-github-squared:before { content: '\e801'; } '顮�'
-	.icon-social-github-circled:before { content: '\f301'; } '飳�'
-	.icon-social-facebook-rect:before { content: '\e804'; } '顮�'
-	.icon-social-twitter-bird:before { content: '\e805'; } '顮�'
-	.icon-social-flickr-circled:before { content: '\f304'; } '飳�'
-	.icon-social-twitter-squared:before { content: '\e802'; } '顮�'
-	.icon-social-icq:before { content: '\e80c'; } '顮�'
-	.icon-social-yandex:before { content: '\f305'; } '飳�'
-	.icon-social-yandex-rect:before { content: '\e80d'; } '顮�'
-	.icon-social-vimeo-circled:before { content: '\f307'; } '飳�'
-	.icon-social-github-text:before { content: '\e80a'; } '顮�'
-	.icon-social-googleplus-rect:before { content: '\e809'; } '顮�'
-	.icon-social-twitter-circled:before { content: '\f30a'; } '飳�'
-	.icon-social-vkontakte-rect:before { content: '\e80e'; } '顮�'
-	.icon-social-linkedin-squared:before { content: '\e800'; } '顮€'
-	.icon-social-odnoklassniki:before { content: '\e80f'; } '顮�'
-	.icon-social-facebook-circled:before { content: '\f30d'; } '飳�'
-	.icon-social-odnoklassniki-rect:before { content: '\e810'; } '顮�'
-	.icon-social-facebook-squared:before { content: '\f30e'; } '飳�'
-	.icon-social-vimeo-rect:before { content: '\e807'; } '顮�'
-	.icon-social-gplus-circled:before { content: '\f310'; } '飳�'
-	.icon-social-tumblr-rect:before { content: '\e808'; } '顮�'
-	.icon-social-friendfeed:before { content: '\e811'; } '顮�'
-	.icon-social-pinterest-circled:before { content: '\f313'; } '飳�'
-	.icon-social-friendfeed-rect:before { content: '\e812'; } '顮�'
-	.icon-social-tumblr-circled:before { content: '\f316'; } '飳�'
-	.icon-social-deviantart:before { content: '\e814'; } '顮�'
-	.icon-social-jabber:before { content: '\f317'; } '飳�'
-	.icon-social-linkedin-circled:before { content: '\f319'; } '飳�'
-	.icon-social-lastfm-rect:before { content: '\e816'; } '顮�'
-	.icon-social-linkedin-rect:before { content: '\e817'; } '顮�'
-	.icon-social-dribbble-circled:before { content: '\f31c'; } '飳�'
-	.icon-social-stumbleupon-circled:before { content: '\f31f'; } '飳�'
-	.icon-social-instagram-filled:before { content: '\e81a'; } '顮�'
-	.icon-social-lastfm-circled:before { content: '\f322'; } '飳�'
-	.icon-social-rdio:before { content: '\f324'; } '飳�'
-	.icon-social-rdio-circled:before { content: '\f325'; } '飳�'
-	.icon-social-spotify-circled:before { content: '\f328'; } '飳�'
-	.icon-social-qq:before { content: '\f32a'; } '飳�'
-	.icon-social-skype-circled:before { content: '\f33a'; } '飳�'
-	.icon-social-renren:before { content: '\f33c'; } '飳�'
-	.icon-social-sina-weibo:before { content: '\f33f'; } '飳�'
-	.icon-social-picasa:before { content: '\f345'; } '飴�'
-	.icon-social-mixi:before { content: '\f34b'; } '飴�'
-	.icon-social-behance:before { content: '\f34e'; } '飴�'
-	.icon-social-google-circles:before { content: '\f351'; } '飴�'
-	.icon-social-vkontakte:before { content: '\f354'; } '飴�'
-	.icon-social-smashing:before { content: '\f357'; } '飴�'
-	.icon-social-db-shape:before { content: '\f600'; } '飿€'
-	.icon-social-sweden:before { content: '\f601'; } '飿�'
-	.icon-social-logo-db:before { content: '\f603'; } '飿�' */
+	/* http://assets.av2.me/lib/font-social/font/fontello.eot */
 </style>
 </html>
