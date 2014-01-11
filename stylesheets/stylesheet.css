@@ -90,7 +90,7 @@ header h2 {
 }
 
 .inner {
-  width: 620px;
+  width: 670px;
   margin: 0 auto;
 }
 
@@ -186,7 +186,7 @@ pre {
   overflow: auto;
 }
 pre code {
-  color: #f2f2f2;
+  color: #999;
   background-color: #303030;
   border: none;
   padding: 0;
@@ -196,6 +196,9 @@ ul, ol, dl {
   margin-bottom: 20px;
 }
 
+.run{
+  color: #DD4;
+}
 
 /* COMMON STYLES */
 
