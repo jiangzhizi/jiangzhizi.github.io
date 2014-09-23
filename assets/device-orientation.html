@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<title>device-orientation</title>
+	<style>
+		*{margin: 0;padding: 0;}
+		html, body, #content{width: 100%; height: 100%; overflow: hidden;}
+		#content{position: relative;}
+		.infomation{position: absolute; z-index: 20;left: 0;top: 0;}
+		.background{position: absolute; left: 50%; top: 50%;background: url("/image/wenli.jpg") repeat center center scroll transparent; background-size:1920px 1200px;width:1920px; height:1200px;}
+		.background .circle{width: 90px;height: 90px;background-color: red; border-radius: 100%; position: absolute; 
+			-webkit-transition: all 1s linear 0;
+			transition: all 1s linear 0;
+		}
+		.background .circle-1{left: 200px; top: 300px; }
+		.background .circle-2{left: 500px; top: 100px; width: 50px;height: 50px;}
+		.background .circle-3{left: 300px; top: 500px; width: 110px;height: 110px;}
+		.win-border{position: absolute; background-color: rgba(0,0,0,.6); }
+		.win-t{left: 0;top: 0; width: 100%;}
+		.win-r{right: 0;height: 200px;}
+		.win-b{left: 0;bottom: 0; width: 100%;}
+		.win-l{left: 0;height: 200px;}
+		.start-btn{position: absolute; left: 50%; top: 50%; width: 120px; height: 40px; margin-left: -60px; margin-top: -20px;line-height: 40px; background-color: red; text-align: center; font-size: 20px; color: #fff; border-radius: 3px;
+			-webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.6);
+			box-shadow: 2px 2px 2px rgba(0,0,0,.6);
+		}
+	</style>
+	<script src="/js/zepto.1.0.4.js"></script>
+</head>
+<body>
+	<div id="content">
+		<table class="infomation"><tbody><tr><td>左右：</td><td id="alpha"></td></tr><tr><td>前后：</td><td id="beta"></td></tr><tr><td>扭转：</td><td id="gamma"></td></tr><tr><td>目标进入区域：</td><td id="other-info"></td></tr><tr><td>其它信息：</td><td id="other-info-2"></td></tr></tbody></table>
+		<div id="background" class="background">
+			<div class="circle circle-1"></div>
+			<div class="circle circle-2"></div>
+			<div class="circle circle-3"></div>
+		</div>
+		<div class="win-border win-t"></div>
+		<div class="win-border win-r"></div>
+		<div class="win-border win-b"></div>
+		<div class="win-border win-l"></div>
+		<div class="start-btn">开始</div>
+	</div>
+	<script>
+		(function($){
+			var beta = 0, gamma = 0,
+				betaFirst = 0; //初始化一个beta值，因为用户拿手机常常是前后倾斜的，而不是水平朝上的
+			var W = window.innerWidth, // window.devicePixelRatio,
+				H = window.innerHeight;
+			var backgroundWidth = 0, backgroundHeight = 0; //背景的大小
+			var winWidth = 200, winHeight = 200, //默认中心200x200的区域为window
+				yDark = (H - winHeight)/2, //上(下)阴影区域高度
+				xDark = (W - winWidth)/2; //左(右)阴影区域宽度
+			var arriveYCoord = arriveXCoord = false;//是否到达上(下)或左(右)边界
+			Util = {
+				round: function(val){
+					var threshold = 5;
+					 return Math.round(val / threshold);
+				}
+			};
+			var page = {
+				initBackgroundSize: function(){
+					var background = $('.background');
+					backgroundWidth = background.width();
+					backgroundHeight = background.height();
+					background.css({'margin-left': -backgroundWidth/2, 'margin-top': -backgroundHeight/2});
+				},
+				//window：页面中间的高亮透明区域
+				initWindow: function(){
+					$('.win-t').css({'height': yDark}); 
+					$('.win-r').css({'width': xDark, 'top': yDark}); 
+					$('.win-b').css({'height': yDark}); 
+					$('.win-l').css({'width': xDark, 'top': yDark}); 
+				},
+				initEvent: function(){
+					$('.circle').on('click', function(ev){
+						alert('└(^o^)┘');
+					});
+					$('.start-btn').on('click', function(ev){
+						$('.start-btn').hide();
+						$(window).on('deviceorientation', page.deviceorientationListener);
+					});
+				},
+				deviceorientationListener: function(evt){
+					!betaFirst && (betaFirst = Util.round(evt.beta));
+					beta += Util.round(evt.beta) - betaFirst; //前后移动
+					gamma += Util.round(evt.gamma); //翻转移动
+					arriveYCoord = arriveXCoord = false; //未达到边界
+					if(Math.abs(beta) + yDark + winHeight/2 >= backgroundHeight/2){ //达到上(下)边界
+						arriveYCoord = true;
+					}
+					if(Math.abs(gamma) + xDark + winWidth/2 >= backgroundWidth/2){ //达到左(右)边界
+						arriveXCoord = true;
+					}
+					if(arriveYCoord){
+						beta = beta < 0 ? -(backgroundHeight/2 - yDark - winHeight/2) : (backgroundHeight/2 - yDark - winHeight/2);
+					}
+					if(arriveXCoord){
+						gamma = gamma < 0 ? -(backgroundWidth/2 - xDark - winWidth/2) : (backgroundWidth/2 - xDark - winWidth/2);
+					}
+					// $('#other-info-2').text(arriveYCoord);
+					$('#beta').text(beta);
+					$('#gamma').text(gamma);
+					$('#background').css('-webkit-transform', 'translate(' + gamma + 'px,' + beta + 'px)');
+					$('#other-info').text(page.isInWindow($('.circle-1')));
+				},
+				//判断target是否进入了window区域
+				isInWindow: function(target){
+					var tTop = target.offset().top,
+						tLeft = target.offset().left,
+						tWidth = target.width(),
+						tHeight = target.height();
+					//有个前提：target必须小于200x200。target完全处于area内部
+					if(tTop > yDark && tLeft > xDark && (tTop + tHeight < yDark + winHeight) && (tLeft + tWidth < xDark + winWidth)){
+						return true;
+					}
+					return false;
+				},
+				fly: function(target){
+					var run = function(){
+						var tTop = target.offset().top,
+							tLeft = target.offset().left;
+						var x = Math.random() > .5 ? Math.random() * 300 : - Math.random() * 300,
+							y = Math.random() > .5 ? Math.random() * 300 : - Math.random() * 300;
+						if(tTop < yDark){ //进入顶部盲区
+							(y < 0) && (y = -y);
+						}
+						if(tTop + target.height() > backgroundHeight - yDark ){ //进入底部盲区
+							(y > 0) && (y = -y);
+						}
+						if(tLeft < xDark){ //进入左边盲区
+							(x < 0) && (x = -x);
+						}
+						if(tLeft + target.width() > backgroundWidth - xDark){ //进入右边盲区
+							(x > 0) && (x = -x);
+						}
+						target.css('-webkit-transform', 'translate(' + x + 'px,' + y + 'px)');
+						// requestAnimationFrame(run);
+					};
+					setInterval(function(){
+						run();
+					}, 2000);
+				}
+			};
+			window.onload = function(){
+				page.initBackgroundSize();
+				page.initWindow();
+				page.initEvent();
+				$('.circle').each(function(k, v){
+					page.fly($(v));
+				});
+			};
+			
+		})(Zepto);
+	</script>
+</body>
+</html>
