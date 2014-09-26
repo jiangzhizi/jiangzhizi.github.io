@@ -7,3 +7,7 @@ node_modules
 m.json
 doc
 index.html.dump
+.tmp
+.sass-cache
+bower_components
+test/bower_components
