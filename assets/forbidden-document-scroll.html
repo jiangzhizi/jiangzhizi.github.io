@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>禁止系统滚屏，但是允许其中的某个节点可以滚动</title>
+	<title>RAF 、 禁止系统滚屏，但是允许其中的某个节点可以滚动</title>
 </head>
 <body>
 	<script>
@@ -14,6 +14,17 @@
 		$('.content').on('touchmove', function(ev){
 			ev.stopPropagation();
 		});
+
+		//------------------
+
+		//预定义requestAnimationFrame，保持兼容
+		var RAF = 
+	        window.requestAnimationFrame || 
+	        window.webkitRequestAnimationFrame || 
+	        function(callback){
+	            setTimeout(callback, 1000 / 60);
+	        };
+	    //code here...
 	</script>
 </body>
 </html>
