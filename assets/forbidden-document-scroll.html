@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>禁止系统滚屏，但是允许其中的某个节点可以滚动</title>
+</head>
+<body>
+	<script>
+		//禁止系统滚屏
+		$(document).on('touchmove', function(ev){
+			ev.preventDefault();
+		});
+		//对于某容器，阻止冒泡即可不受限于系统对滚屏的限制
+		$('.content').on('touchmove', function(ev){
+			ev.stopPropagation();
+		});
+	</script>
+</body>
+</html>
