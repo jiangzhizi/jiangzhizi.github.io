@@ -1,23 +1,16 @@
 //添加SeaJS、AMD、CommomJS支持
-var Obj = {
+var FastClick = {
 	//body...
 };
 
-// 添加 Sea.js 和 AMD 库支持. [ require.js... ]
-if (typeof define === 'function') {
+if (typeof define !== 'undefined' && (define.amd || define.cmd)) {
+	// AMD. Register as an anonymous module.
 	define(function() {
-		return {
-			Obj: Obj
-		};
+		'use strict';
+		return FastClick;
 	});
-}
-
-// 添加 CommomJS 库支持.
-if (typeof exports !== 'undefined') {
-	exports.Obj = Obj;
-}
-
-// 不支持 CommonJS 和 AMD/CMD 定义全局变量
-if (typeof window !== 'undefined') {
-	window.Obj = Obj;
+} else if (typeof module !== 'undefined' && module.exports) {
+	module.exports = FastClick;
+} else {
+	window.FastClick = FastClick;
 }
